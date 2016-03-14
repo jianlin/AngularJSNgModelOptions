@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="css/bootstrap.css" media="screen" title="no title" charset="utf-8">
         <!-- css and js included here for experimentation and ease of editing.
              In a real production situation they should be in a separate file -->
-        
+
         <style>
             main section, aside section {
                 border: 6px dashed dodgerblue; border-radius: 6px; min-height: 300px; padding: 1em
@@ -18,22 +18,23 @@
             code { color: #333 }
             input[ng-model-options] { background: #ffc }
         </style>
-        
+
         <script>
             angular.module("myApp", [])
                 .controller("MyController", function() {
                     var vm = this;
 
                     vm.foo = 123;
-                
+
                     vm.getReversedDigitNumber = function() {
                         return +(vm.foo.toString().split("").reverse().join(""));
                     }
                 });
 
         </script>
-        
+
     </head>
+
     <body ng-controller="MyController as myCtrl">
 
         <div class="container">
