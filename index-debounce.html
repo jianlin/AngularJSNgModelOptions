@@ -17,7 +17,7 @@
                 border: 6px dashed dodgerblue; border-radius: 6px; min-height: 300px; padding: 1em
             }
             aside section { border-color: orange }
-            code { color: #333 }
+            code { color: #333; background: #eee }
             input[ng-model-options] { background: #ffc }
         </style>
 
@@ -44,7 +44,7 @@
                 <main class="col-sm-8">
                     <section>
 
-                        the two highlighted input fields use <code>ng-model-options { debounce: 1000 }</code>
+                        the two highlighted input fields use <code>ng-model-options { debounce: 1000 }</code>... the right one uses <code>1500</code>
                         <p><input type="text" ng-model="myCtrl.foo" ng-model-options="{ debounce: 1000 }"></p>
                         <p><input type="text" ng-model="myCtrl.foo"></p>
                         <p>the value is {{ myCtrl.foo }}</p>
@@ -60,7 +60,7 @@
 
                         <p>the value is <span ng-bind="myCtrl.foo"></span></p> <!-- another way -->
                         <p>is the value even? {{ myCtrl.foo % 2 === 0 }}</p>
-                        <p><input type="text" ng-model="myCtrl.foo" ng-model-options="{ debounce: 1000 }"></p>
+                        <p><input type="text" ng-model="myCtrl.foo" ng-model-options="{ debounce: 1500 }"></p>
 
                     </section>
                 </aside>
